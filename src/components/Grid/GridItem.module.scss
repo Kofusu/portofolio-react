@@ -1,0 +1,10 @@
+@use "/src/assets/styles/colors" as colors;
+@use "/src/assets/styles/mixin" as mixin;
+
+
+.itemGrid {
+  border: 1px solid colors.$textDark;
+  font-size: 2em;
+  @include mixin.flexBox(center, center);
+
+}

@@ -1,0 +1,9 @@
+@use 'assets/styles/mixin' as mixin;
+@use 'assets/styles/colors' as colors;
+
+.section {
+  @include mixin.flexBox(center, flex-start);
+  padding: 1rem 4vw;
+  min-height: 90vh;
+  flex-wrap: wrap;
+}

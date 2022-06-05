@@ -1,0 +1,37 @@
+@use 'assets/styles/mixin' as mixin;
+@use 'assets/styles/colors' as colors;
+
+.button {
+  background: none;
+  color: colors.$textDark;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem 0.5rem;
+  cursor: pointer;
+  border: 1px solid colors.$bgLight;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.iconButton {
+  padding: 1rem;
+  margin: 2rem 1rem 1rem;
+  color: colors.$textDark;
+  background: none;
+  border: 1px solid colors.$textDark;
+  cursor: pointer;
+  
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.iconButton.shadowed {
+  cursor: help;
+  border: none;
+  box-shadow: 0px 1px 50px 5px colors.$red;
+  &:hover {
+    transform: scale(1);
+  }
+}

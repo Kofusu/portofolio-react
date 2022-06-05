@@ -1,0 +1,55 @@
+@use '/src/assets/styles/colors' as colors;
+@use '/src/assets/styles/mixin' as mixin;
+
+
+.hamburgerContainer {
+  @include mixin.position(1rem, 4vw, null, null);
+
+  padding: 0.25rem;
+  margin: 0 0 0 1.5rem;
+  width: 50px;
+  cursor: pointer;
+  overflow-x: hidden;
+  position: fixed;
+  z-index: 101;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+  
+  .hamburgerLine {
+    border-bottom: 2px solid colors.$textDark;
+    margin: 0.4rem;
+    position: relative;
+    z-index: 101
+  }
+}
+
+.modalMenu {
+  @include mixin.position(0, 0, 0, 0);
+  @include mixin.flexBox(center, center);
+
+  flex-direction: column;
+  background: linear-gradient(rgb(255, 79, 79), rgb(170, 0, 0));
+  position: fixed;
+  z-index: 100;
+  overflow: hidden;
+
+  a {
+    width: 75vw;
+    text-align: center;
+    padding: 1rem 0;
+    margin: 1rem;
+
+    &:hover {
+      transform: scale(1.1);
+      text-decoration: underline;
+    }
+  }
+}
+
+.activeNav {
+  transform: scale(1.1);
+  color: colors.$textLight;
+  text-decoration: underline;
+}

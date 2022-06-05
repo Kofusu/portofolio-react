@@ -1,0 +1,54 @@
+@use 'assets/styles/mixin' as mixin;
+@use 'assets/styles/colors' as colors;
+
+.container {
+  padding: 1rem;
+  min-height: 80vh;
+
+  .form {
+    @include mixin.flexBox(center, center);
+    padding: 0 1rem;
+  }
+
+  .musicContainer {
+    @include mixin.flexBox(space-around, center);
+    flex-direction: column;
+
+    .section {
+      margin-bottom: 1rem;
+      padding: 1rem;
+      width: 100%;
+      text-align: center;
+      border: 1px solid colors.$textDark;
+
+      .title {
+        text-decoration: underline;
+        margin-bottom: 1rem
+      }
+
+      .trackContainer, .artistsContainer {
+        @include mixin.flexBox(center, center);
+        flex-wrap: wrap;
+
+        .card {
+          @include mixin.flexBox(space-between, center);
+          width: 80%;
+          padding: 1rem;
+          margin: 1rem;
+          border: 1px solid colors.$textDark;
+          box-shadow: 0 1px 10px 1px colors.$red;
+
+          &:hover {
+            transform: scale(1.01);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+ .form {
+   flex-direction: column;
+ }
+}

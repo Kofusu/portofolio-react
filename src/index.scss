@@ -1,0 +1,30 @@
+@use 'assets/styles/colors' as colors;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: rem;
+}
+
+body {
+  font-family: 'Press Start 2P', cursive, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: colors.$textDark;
+  background: colors.$bgDark;
+  overflow-x: hidden;
+  user-select: none;
+
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+

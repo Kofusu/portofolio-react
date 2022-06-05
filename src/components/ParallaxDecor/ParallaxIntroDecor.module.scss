@@ -1,0 +1,38 @@
+@use "/src/assets/styles/colors" as colors;
+@use "/src/assets/styles/mixin" as mixin;
+
+.decor {
+  @include mixin.position(0, 0, 0, 0);
+  position: absolute;
+  background: colors.$bgDark;
+}
+.decor1 {
+  clip-path: ellipse(200px 200px at 100% 50%);
+}
+.decor2 {
+  clip-path: ellipse(200px 200px at 0% 90%);
+}
+.decor3 {
+  clip-path: polygon(0 34%, 60% 34%, 60% 35%, 0 35%);
+}
+.decor4 {
+  clip-path: polygon(40% 90%, 100% 90%, 100% 91%, 40% 91%);
+}
+
+@media (max-width: 768px) {
+  .decor1 {
+    clip-path: ellipse(100px 100px at 100% 50%);
+  }
+  .decor2 {
+    clip-path: ellipse(100px 100px at 0% 90%);
+  }
+}
+
+@media (min-width: 1280px) {
+  .decor1 {
+    clip-path: ellipse(300px 300px at 100% 50%);
+  }
+  .decor2 {
+    clip-path: ellipse(300px 300px at 0% 90%);
+  }
+}

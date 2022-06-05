@@ -1,0 +1,47 @@
+@use "assets/styles/mixin" as mixin;
+@use "assets/styles/colors" as colors;
+
+.container {
+  @include mixin.flexBox(space-around, center);
+  padding: 1rem;
+  min-height: 90vh;
+  position: relative;
+
+  .scores {
+    position: absolute;
+    @include mixin.position(1rem, null, null, null);
+
+    .score {
+      padding: 0.5rem;
+      font-size: 3.5rem;
+      margin: 0.5rem;
+    }
+    .player {
+      border-bottom: 1px solid #00ff00;
+      text-align: center;
+    }
+    .enemy {
+      border-bottom: 1px solid #ff0000;
+      text-align: center;
+    }
+  }
+
+  .divider {
+    position: absolute;
+    border: 1px solid colors.$textDark;
+    height: 30vw;
+    top: 25vh
+  }
+
+  .playerSide,
+  .enemySide {
+    @include mixin.flexBox(space-between, center);
+    height: 50vh;
+    flex-direction: column;
+  }
+
+  .choice {
+    position: absolute;
+    bottom: 1rem;
+  }
+}

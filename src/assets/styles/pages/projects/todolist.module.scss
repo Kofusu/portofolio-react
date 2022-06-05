@@ -1,0 +1,15 @@
+@use 'assets/styles/mixin' as mixin;
+@use 'assets/styles/colors' as colors;
+
+.form {
+  @include mixin.flexBox(center, center);
+  margin-top: 4.5rem;
+  flex-direction: column;
+  padding: 1rem 4vw;
+}
+
+.listsContainer {
+  @include mixin.flexBox(center, flex-start);
+  flex-wrap: wrap;
+  min-height: 75vh;
+}

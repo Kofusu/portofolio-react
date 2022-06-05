@@ -1,0 +1,15 @@
+@use "/src/assets/styles/colors" as colors;
+@use "/src/assets/styles/mixin" as mixin;
+
+.title {
+  width: 100%;
+  text-align: center;
+  margin: 2rem 0 0.5rem;
+  padding: 1rem;
+  background: colors.$gradientRed;
+  border-radius: 5px;
+}
+
+.title:nth-child(1) {
+  margin: 0 0 1rem;
+}

@@ -1,0 +1,38 @@
+@use 'assets/styles/mixin' as mixin;
+@use 'assets/styles/colors' as colors;
+
+.card {
+  padding: 1rem;
+  height: 420px;
+  width: 310px;
+  position: relative;
+  border: 1px solid colors.$red;
+  overflow: hidden;
+  text-align: center;
+  margin: 1rem;
+  border-radius: 20px;
+
+  a {
+    @include mixin.flexBox(center, center);
+    width: 100%;
+    height: 100%;
+  
+  
+    .decor {
+      @include mixin.position(0, 0, 0, 0);
+      position: absolute;
+      background: colors.$gradientRed;
+    }
+    .decor1 {
+      clip-path: ellipse(100px 100px at 100% 45%);
+    }
+    .decor2 {
+      clip-path: ellipse(100px 100px at 0% 80%);
+    }
+
+    span {
+      position: relative;
+      z-index: 1;
+    }
+  }
+}

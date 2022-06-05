@@ -1,0 +1,17 @@
+@use "/src/assets/styles/colors" as colors;
+@use "/src/assets/styles/mixin" as mixin;
+
+.containerGrid {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: 200px 200px 200px;
+  grid-gap: 1px;
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .containerGrid {
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+  }
+}

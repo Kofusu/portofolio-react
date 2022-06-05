@@ -1,0 +1,50 @@
+@use "/src/assets/styles/colors" as colors;
+@use "/src/assets/styles/mixin" as mixin;
+
+.introSection {
+  @include mixin.flexBox(center, flex-start);
+
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background: colors.$gradientRed;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+
+  .name,
+  .role {
+    margin: 1rem 4vw;
+    line-height: 20px;
+    font-size: 1.2rem;
+    z-index: 1;
+  }
+}
+
+.infoSection {
+  @include mixin.flexBox(center, center);
+
+  flex-direction: column;
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 4vw;
+
+  .cardContainer {
+    @include mixin.flexBox(center, center);
+    flex-wrap: wrap;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+  .introSection {
+    font-size: 0.75rem;
+  }
+  .name,
+  .role {
+    font-size: 0.5em;
+  }
+}

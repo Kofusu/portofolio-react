@@ -1,0 +1,28 @@
+@use 'assets/styles/mixin' as mixin;
+@use 'assets/styles/colors' as colors;
+
+.card {
+  @include mixin.flexBox(space-between, flex-end);
+  background: none;
+  flex-direction: column;
+  box-shadow: 0 1px 50px 0px colors.$red;
+  padding: 1rem;
+  margin: 1rem;
+  height: 35vh;
+  width: 320px;
+  position: relative;
+
+  .text {
+    margin-top:35%;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px ) {
+  .card {
+    font-size: 0.75em;
+    height: 50vh;
+    width: 275px;
+  }
+}

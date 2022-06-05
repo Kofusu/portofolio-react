@@ -1,0 +1,52 @@
+@use '/src/assets/styles/colors' as colors;
+@use '/src/assets/styles/mixin' as mixin;
+
+.header {
+  @include mixin.flexBox(space-between, center);
+  @include mixin.position(0, 0, null, 0);
+  background: colors.$gradientRedHeader;
+  position: fixed;
+  padding: 1rem 4vw;
+  z-index: 99;
+
+  .logo {
+    color: inherit;
+    text-decoration: none;
+    margin: 0.5rem 0;
+
+    &:hover {
+      text-decoration: underline;
+      transform: scale(1.1)
+    }
+  }
+
+  .nav {
+    @include mixin.flexBox(space-between, center);
+    margin-right: 3rem;
+
+    a {
+      margin: 0 1rem;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    
+    a:nth-child(1) {
+      color: #fff;
+      border-radius: 7.5px;
+    }
+    
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    background: colors.$gradientRedHeaderMobile;
+    .nav {
+      a {
+        display: none;
+      }
+    }
+  }
+}
+

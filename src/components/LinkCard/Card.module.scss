@@ -1,0 +1,61 @@
+@use "/src/assets/styles/colors" as colors;
+@use "/src/assets/styles/mixin" as mixin;
+
+.card {
+  background: colors.$bgDark;
+  padding: 1rem;
+  margin: 1rem;
+  height: 50vh;
+  width: 320px;
+  position: relative;
+  &::after {
+    @include mixin.position(-1px, -1px, -1px, -1px);
+
+    content: "";
+    position: absolute;
+    background: colors.$gradientRed;
+    z-index: -1;
+  }
+
+  h2 {
+    margin: auto;
+    background: colors.$gradientRedHeader;
+    background-clip: text;
+    color: transparent;
+    position: relative;
+    z-index: 1;
+  }
+
+  a {
+    @include mixin.position(null, 1rem, 1rem, null);
+
+    position: absolute;
+    z-index: 1;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .decor {
+    @include mixin.position(0, 0, 0, 0);
+    position: absolute;
+    background: colors.$gradientRed;
+  }
+  .decor1 {
+    clip-path: polygon(100% 80%, 25% 80%, 25% 81%, 100% 81%);
+  }
+  .decor2 {
+    clip-path: ellipse(50px 50px at 100% 50%);
+  }
+}
+
+@media (max-width: 768px ) {
+  .card {
+    height: 75vh;
+    width: 275px;
+
+    h2 {
+      font-size: 1rem;
+    }
+  }
+}
