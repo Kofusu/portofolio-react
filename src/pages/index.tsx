@@ -39,7 +39,7 @@ const RootPage: React.FC = () => {
           Hendratara Pratama
         </motion.div>
         <motion.div variants={introItemVariants} className={styles.role}>
-          FullStack Developer
+          Frontend Engineer and Machine Learning Developer
         </motion.div>
       </motion.section>
 
@@ -57,8 +57,8 @@ const RootPage: React.FC = () => {
         >
           <SectionDecor />
           <Card to={projectMemo} text={projectDesc} />
-          <Card to={skillsMemo} text={skillsDesc} />
-          <Card to={experienceMemo} text={experienceDesc} />
+          {/* <Card to={skillsMemo} text={skillsDesc} />
+          <Card to={experienceMemo} text={experienceDesc} /> */}
         </motion.span>
       </motion.section>
     </Fragment>

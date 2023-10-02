@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 const useMusicFetch = (initSearch: string) => {
   const [searchInput, setSearchInput] = useState<string>(initSearch);
@@ -15,7 +15,7 @@ const useMusicFetch = (initSearch: string) => {
     },
   };
 
-  const refetch = async () => {
+  const refetch = useCallback(async () => {
     await axios
     .request(options)
     .then(function (response) {
@@ -24,11 +24,11 @@ const useMusicFetch = (initSearch: string) => {
     .catch(function (error) {
       console.error(error);
     });
-  }
+  }, [])
 
   useEffect(() => {
     refetch()
-  }, [])
+  }, [refetch])
 
   return {
     searchInput, setSearchInput, data, refetch, setData

@@ -1,11 +1,9 @@
-import AvoidHeader from "components/AvoidHeader/AvoidHeader";
+// import AvoidHeader from "components/AvoidHeader/AvoidHeader";
 import { Fragment } from "react";
 
 const Projects: React.FC = () => {
   return (
     <Fragment>
-      <AvoidHeader />
-      <AvoidHeader />
       <section>Hello There</section>
     </Fragment>
   );

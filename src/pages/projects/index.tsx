@@ -14,13 +14,16 @@ const Projects: React.FC = () => {
         <GridCard href="todolist" title="Redux To Do List" />
         <GridCard href="suitgame" title="VS AI - Rock Paper Scissor" />
         <GridCard href="tictactoe" title="MultiPlayer - Tic Tac Toe" />
-        <GridCard href="musicplayer" title="Music Searching with API" />
-        <GridCard href="sortalgorihmvisualize" title="Sort Algorithm Visualize" />
+        {/* <GridCard href="musicplayer" title="Music Searching with API" />
+        <GridCard href="sortalgorihmvisualize" title="Sort Algorithm Visualize" /> */}
         
-        <SectionTitle title="FullStack Projects" />
-        <GridCard newtab href="https://github.com/Kofusu" title="Whatsapp Clone" />
+        <SectionTitle title="Other Projects" />
+        <GridCard newtab href="https://rumah-sakit-sehat.000webhostapp.com/" title='Pendaftaran Rumah Sakit' />
+        <GridCard newtab href="https://final-project-react-deployment.web.app//" title='Quiz Web App' />
+        <GridCard newtab href="http://ginekosahabatku.net" title='Ginekologi' />
+        {/* <GridCard newtab href="https://github.com/Kofusu" title="Whatsapp Clone" />
         <GridCard newtab href="https://github.com/Kofusu" title="Instagram Clone" />
-        <GridCard newtab href="https://github.com/Kofusu" title="Tokopedia Clone" />
+        <GridCard newtab href="https://github.com/Kofusu" title="Tokopedia Clone" /> */}
       </section>
     </Fragment>
   );

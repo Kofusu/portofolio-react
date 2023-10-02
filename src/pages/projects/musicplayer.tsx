@@ -1,5 +1,5 @@
 import AvoidHeader from "components/AvoidHeader/AvoidHeader";
-import React, { Fragment, useState } from "react";
+import React, { Fragment } from "react";
 
 import styles from "assets/styles/pages/projects/musicplayer.module.scss";
 import TextInput from "components/MiddleInput/TextInput";
